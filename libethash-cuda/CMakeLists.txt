@@ -29,11 +29,11 @@ else()
 		list(APPEND CUDA_NVCC_FLAGS "-gencode arch=compute_75,code=sm_75")
 	endif()
 	if(NOT CUDA_VERSION VERSION_LESS 11.0)
-		# NVIDIA A100 and NVIDIA DGX-A100
+		# NVIDIA A100 and NVIDIA DGX-A100 support
 		list(APPEND CUDA_NVCC_FLAGS "-gencode arch=compute_80,code=sm_80")
 	endif()
 	if(NOT CUDA_VERSION VERSION_LESS 11.1)
-		# Tesla GA10x cards, RTX Ampere – RTX 3080/3090, RTX A6000, RTX A40
+		# Tesla GA10x cards, RTX Ampere – RTX 3080/3090, RTX A6000, RTX A40 support
 		list(APPEND CUDA_NVCC_FLAGS "-gencode arch=compute_86,code=sm_86")
 	endif()
 endif()
